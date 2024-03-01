@@ -11,7 +11,10 @@ useEffect(()=> {
 function Home() {
   return (
     <>
-    CategoryCard.map(categorie =>
+    CategoryCard.map( categorie => {
+       <div><h2>{categorie.name}</h2> </div>
+
+      }
     
     )
     </>
