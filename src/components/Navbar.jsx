@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css'
 function Navbar() {
   return (
+    <div className="container">
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -31,6 +32,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    </div>
   );
 }
 

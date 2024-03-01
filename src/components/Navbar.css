@@ -9,5 +9,8 @@ svg{
 }
 nav{
     background-color: antiquewhite;
-   
+   width: 100%;
+}
+.container{
+    width: 80%;
 }

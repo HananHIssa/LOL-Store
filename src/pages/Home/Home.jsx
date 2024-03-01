@@ -23,7 +23,7 @@ function Home() {
 
   return (
     <>
-    <div className="parent">
+    <div className=" container parent">
           {
             CategoryCard.map(category =>
               <div key={category.id}> 
