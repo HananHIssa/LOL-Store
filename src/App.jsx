@@ -5,10 +5,10 @@ import Home from './pages/Home/Home'
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import Categories from './pages/Categories/Categories';
+import Root from './router/Root'
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <root />,
+    element: <Root />,
     children :[
       {
         path :'/',
