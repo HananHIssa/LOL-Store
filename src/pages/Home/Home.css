@@ -1,26 +1,4 @@
-.parent {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .parent > div {
-    flex: 0 0 30%; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .parent > div img {
-    max-width: 100%;
-    border-radius: 4px;
-  }
-  
-  .parent > div h2 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
-  }
-  
+
+.img{
+  width:100%;   
+}
