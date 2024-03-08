@@ -1,4 +1,3 @@
-/* تحديث التصميم باستخدام display: flex */
 .parent {
     display: flex;
     justify-content: space-between;
