@@ -12,9 +12,12 @@ svg{
     width: 20px;
 }
 nav{
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.342);
    width: 100%;
+   border-radius: 5px;
 }
 .container{
     width: 100%
+}
+.con{
 }

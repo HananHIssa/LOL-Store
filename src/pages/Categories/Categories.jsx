@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Categories.css'
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 function Categories() {
   let [CategoryCard, setCategotyCards] = useState([]);
   const getData = async () => {
@@ -18,18 +19,18 @@ function Categories() {
 
   return (
     <>
-    <div className=" container parent">
-          {
-            CategoryCard.map(category =>
-              <div key={category.id}> 
-                  <img src={category.image.secure_url} />
-                  <h2>{category.name}</h2>
-               </div>
-            )
-          }
-     </div>
-  </>
-  )
+      <div className="container ">
+        {CategoryCard.map(category => (
+          
+          <Link to={`/Product/${category.id}`} key={category.id}className='linkStyle'>
+            <img src={category.image.secure_url} alt={category.name} />
+            <div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default Categories
