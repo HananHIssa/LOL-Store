@@ -24,7 +24,7 @@ const SignIn   = () => {
       <div className='cont'>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="email">Email</label>
           <input
             type="text"
             id="username"
