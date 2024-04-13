@@ -7,7 +7,7 @@ export default function Product() {
   const {  id } = useParams();
   const getData = async () => {
    
-    const { data } = await axios.get(`https://ecommerce-node4.vercel.app/products/category/${id}`);      
+    const { data } = await axios.get(`https://ecommerce-node4-five.vercel.app/products/category/${id}`);      
     setProducts(data.products);
   }
     useEffect(() => {

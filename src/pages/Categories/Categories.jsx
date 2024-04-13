@@ -6,12 +6,12 @@ function Categories() {
   let [CategoryCard, setCategotyCards] = useState([]);
   const getData = async () => {
 
-      const { data } = await axios.get("https://ecommerce-node4.vercel.app/categories/active?page=1&limit=9#");
+     const { data } = await axios.get("https://ecommerce-node4-five.vercel.app/categories/active?page=1&limit=9#");
+     //;
       setCategotyCards(data.categories);
       console.log(data.categories);
   
   }
-
   useEffect(() => {
     getData();
 
