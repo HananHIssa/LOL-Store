@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .info h2 {
+    font-size: 24px;
+  }
+  
+  .info a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  button span {
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    color: #FF4500;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .onproduct {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .onproduct h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .onproduct img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .discount {
+    color: red;
+  }
+  
+  .qnty {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .qnty button {
+    margin: 0 5px;
+  }
+  
+  .emptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .emptyCart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .emptyCart h3 {
+    font-size: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
+  }
+  

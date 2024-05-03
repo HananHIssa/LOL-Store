@@ -1,0 +1,104 @@
+.allprofile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .mainprofile {
+    width: 80%;
+  }
+  
+  .Profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .Profile .left {
+    flex: 1;
+  }
+  
+  .Profile .right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .Profile img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .Orders {
+    margin-top: 20px;
+  }
+  
+  .Ordercart {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .Ordercart .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .firstinfo p {
+    margin-bottom: 5px;
+  }
+  
+  .Ordercart button {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Ordercart button:hover {
+    background-color: #FF6347;
+  }
+  
+  .Ordercart .profileProduct {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .Ordercart .profileProduct p {
+    margin-bottom: 5px;
+  }
+  
+  .info span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader .spinner {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { Bounce, toast } from 'react-toastify';
-
+import './Order.css'
 
 export default function Order() {
     const [cart, setCartProducts] = useState([]);

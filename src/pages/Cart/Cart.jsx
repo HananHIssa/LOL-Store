@@ -7,7 +7,7 @@ import { IoCart } from 'react-icons/io5';
 import { MdRemoveShoppingCart } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import { Bounce, toast } from 'react-toastify';
-
+import './Cart.css'
 export default function Cart() {
     const [cartProducts, setCartProducts] = useState([]);
     const token = localStorage.getItem('userToken');
@@ -150,7 +150,6 @@ export default function Cart() {
     <div className='container'>
 
         <div className='info'>
-        <h2>Cart</h2>
         <NavLink to='/order' style={{ textDecoration: 'none' }}>Check Out <BsCartCheckFill /></NavLink>
         <button onClick={() => clearCart()}><span>Clear Cart</span><MdRemoveShoppingCart /></button>
           <p>Total price: {finalPrice()} $</p>

@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Bounce, toast } from 'react-toastify';
-
 export default function Products() {
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
@@ -78,7 +77,6 @@ export default function Products() {
 
   return (
     <div className="container d-flex">
-      <h2>Products</h2>
       {products.map((product) => (
         <div className="" key={product._id}>
           <img src={product.mainImage.secure_url} />

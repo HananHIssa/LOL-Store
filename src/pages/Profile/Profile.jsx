@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Bounce, toast } from 'react-toastify';
 import { MdCancel } from "react-icons/md";
 import Loader from '../../components/loader/Loader';
-
+import './Profile.css'
 
 
 
