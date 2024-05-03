@@ -23,7 +23,7 @@ function Navbar() {
               <NavLink className="nav-link" to='/Categories'>Categories</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to='/Product'>Product</NavLink>
+              <NavLink className="nav-link" to='/Products'>Products</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link " to='/cart'>Cart</NavLink>
@@ -33,6 +33,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link " to='/SignUp'>SignUp</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link " to='/Profile'>Profile</NavLink>
             </li>
           </ul>
         </div>

@@ -1,23 +1,57 @@
-
 import React, { useState } from 'react';
 import './SignIn.css'
+import { Bounce, toast } from 'react-toastify';
+import axios from 'axios';
+import { NavLink, Navigate, useNavigate } from 'react-router-dom';
+
 const SignIn   = () => {
-  const [loginData, setLoginData] = useState({
-    username: '',
+  const navigate = useNavigate();
+
+
+  const [user, setUser] = useState({
+    email: '',
     password: '',
   });
 
   const handleChange = (e) => {
-    setLoginData({
-      ...loginData,
+    setUser({
+      ...user,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log('Login data submitted:', loginData);
-  };
+    try {
+      const { data } = await axios.post(`https://ecommerce-node4-five.vercel.app/auth/signin`, {
+        email: user.email,
+        password: user.password,
+      });
+      setUser({
+        email: '',
+        password: '',
+      });
+      toast.success('Sign in successfully', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+      console.log(data);
+      localStorage.setItem('userToken', data.token);
+      navigate('/');
+
+    } catch (error) {
+      console.log(error);
+      
+    console.log('Login data submitted:', user);
+  }
+}
 
   return (
     <div className="container">
@@ -26,12 +60,10 @@ const SignIn   = () => {
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
-            type="text"
-            id="username"
-            name="username"
-            value={loginData.username}
+            type="email"
+            name="email"
+            value={user.email}
             onChange={handleChange}
-            required
           />
         </div>
 
@@ -41,16 +73,17 @@ const SignIn   = () => {
             type="password"
             id="password"
             name="password"
-            value={loginData.password}
+            value={user.password}
             onChange={handleChange}
-            required
           />
         </div>
         <button type="submit">Login</button>
+        <NavLink to={'/forgotPassword'}>forgot Password?</NavLink>
+
       </form>
     </div>
     </div>
   );
-};
+  }
 
 export default SignIn;
