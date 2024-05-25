@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './SignIn.css'
 import { Bounce, toast } from 'react-toastify';
 import axios from 'axios';
-import { NavLink, Navigate, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const SignIn   = () => {
   const navigate = useNavigate();
@@ -47,8 +47,18 @@ const SignIn   = () => {
       navigate('/');
 
     } catch (error) {
-      console.log(error);
-      
+      console.log(error.response.data.message);
+      toast.error(error.response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
     console.log('Login data submitted:', user);
   }
 }

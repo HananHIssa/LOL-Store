@@ -11,7 +11,7 @@ import './Cart.css'
 export default function Cart() {
     const [cartProducts, setCartProducts] = useState([]);
     const token = localStorage.getItem('userToken');
-
+    /*get all cart from token--> local storge.getitem =userToken*/
     const getCart = async () => {
         try {
           const token = localStorage.getItem('userToken');
